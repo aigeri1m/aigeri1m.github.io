@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        * {
+            margin: 0;
+        }
+        .header {
+            background-color: rgba(0, 0, 0, 0.819);
+            width: 100%;
+            
+        }
+        ul {
+            padding: 10px 0px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            width: 600px;
+        }
+        li {
+            text-decoration: none;
+            text-transform: none;
+            list-style: none;
+            margin-right: 30px;
+        }
+        a {
+            color: white;
+            text-decoration: none;
+        }
+        .main {
+            margin: 10px;
+        }
+        .content-section {
+            display: none;
+        }
+        #content1 {
+            display: block;
+        }
+        img {
+            width: 400px;
+        }
+    </style>
+
+    <div class="header">
+        <ul>
+            <li><a href="#" class="nav-link" data-target="content1">Главная</a></li>
+            <li><a href="#" class="nav-link" data-target="content2">Обо мне</a></li>
+            <li><a href="#" class="nav-link" data-target="content3">Навыки</a></li>
+            <li><a href="#" class="nav-link" data-target="content4">Изображение</a></li>
+        </ul>
+    </div>
+    <div class="main" id="content">
+        <div id="content1" class="content-section">
+            <h1>Добро пожаловать!</h1>
+            <p>Это главная страница нашего одностраничного сайта</p>
+        </div>
+        <div id="content2" class="content-section">
+            <h1>Обо мне</h1>
+            <p>Меня зовут Айгерим</p>
+        </div>
+        <div id="content3" class="content-section">
+            <h1>Навыки</h1>
+            <p>Я умею хорошо танцевать</p>
+        </div>
+        <div id="content4" class="content-section">
+            <h1>Изображение</h1>
+            <p>ПОСТАВЬТЕ ПЖ 100</p>
+            <img src="./homyak.png" alt="">
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const navLinks = document.querySelectorAll('.nav-link');
+
+            navLinks.forEach(function(navLink) {
+                navLink.addEventListener('click', function(event) {
+                event.preventDefault();
+                const targetId = navLink.getAttribute('data-target');
+
+                // Скрыть все блоки контента
+                const allContent = document.querySelectorAll('.content-section');
+                allContent.forEach(function(content) {
+                    content.style.display = 'none';
+                });
+
+                // Показать только выбранный контент
+                const targetContent = document.getElementById(targetId);
+                targetContent.style.display = 'block';
+                });
+            });
+            });
+    </script>
+</body>
+</html>
