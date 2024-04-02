@@ -114,13 +114,11 @@
                 event.preventDefault();
                 const targetId = navLink.getAttribute('data-target');
 
-                // Скрыть все блоки контента
                 const allContent = document.querySelectorAll('.content-section');
                 allContent.forEach(function(content) {
                     content.style.display = 'none';
                 });
 
-                // Показать только выбранный контент
                 const targetContent = document.getElementById(targetId);
                 targetContent.style.display = 'block';
                 });
