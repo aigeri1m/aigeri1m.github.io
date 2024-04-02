@@ -20,7 +20,7 @@
             margin: 0 auto;
             display: flex;
             justify-content: center;
-            width: 600px;
+            width: 700px;
         }
         li {
             text-decoration: none;
@@ -44,6 +44,13 @@
         img {
             width: 400px;
         }
+        .animate {
+            animation: fadein 2s;
+        }
+        @keyframes fadein {
+            from {opacity: 0;}
+            to {opacity: 1;}
+        }
     </style>
 
     <div class="header">
@@ -52,6 +59,10 @@
             <li><a href="#" class="nav-link" data-target="content2">Обо мне</a></li>
             <li><a href="#" class="nav-link" data-target="content3">Навыки</a></li>
             <li><a href="#" class="nav-link" data-target="content4">Изображение</a></li>
+            <li><a href="#" class="nav-link" data-target="content5">Аудио</a></li>
+            <li><a href="#" class="nav-link" data-target="content6">Видео</a></li>
+            <li><a href="#" class="nav-link" data-target="content7">Карта</a></li>
+            <li><a href="#" class="nav-link" data-target="content8">Анимация</a></li>
         </ul>
     </div>
     <div class="main" id="content">
@@ -71,6 +82,26 @@
             <h1>Изображение</h1>
             <p>ПОСТАВЬТЕ ПЖ 100</p>
             <img src="./homyak.png" alt="">
+        </div>
+        <div id="content5" class="content-section">
+            <h1>Аудио</h1>
+            <img src="./homyak.png" alt="">
+            <br>
+            <audio controls>
+                <source src="audio.mp3">
+            </audio>
+        </div>
+        <div id="content6" class="content-section">
+            <h1>Видео</h1>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/bMiZkmqMIK0?si=VtEfzJ_uSGDwPLIG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <div id="content7" class="content-section">
+            <h1>Карта</h1>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2906.439293581117!2d76.94742947589951!3d43.242214271124595!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38836ee584fe528b%3A0xcb1413802f5325fb!2z0KPQvdC40LLQtdGA0YHQuNGC0LXRgiDQnNC10LbQtNGD0L3QsNGA0L7QtNC90L7Qs9C-INCR0LjQt9C90LXRgdCw!5e0!3m2!1sru!2sit!4v1712052399287!5m2!1sru!2sit" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div id="content8" class="content-section">
+            <h1>Анимация</h1>
+            <p class="animate">ПОСТАВЬТЕ ПЖ 100 <br> <img src="./homyak.png" alt=""> </p>
         </div>
     </div>
 
